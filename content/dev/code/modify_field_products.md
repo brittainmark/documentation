@@ -19,7 +19,7 @@ ALTER TABLE products MODIFY COLUMN products_model varchar(40) default NULL;
 
 (The value 40 could be whatever you want but it should be the same in both.)
 
-If your database uses a prefix, you must use it on those two table names (e.g. `ALTER TABLE zen_orders_products`, `ALTER TABLE zen_products`).
+If your database uses a prefix, you must use it on those two table names (e.g. if using the prefix 'zen_' use `ALTER TABLE zen_orders_products...`, `ALTER TABLE zen_products...`).
 
 
 ### Related 
