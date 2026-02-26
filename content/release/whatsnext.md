@@ -13,6 +13,8 @@ noindex: yes
 
 The improvements under consideration for inclusion in v3.0.0 are as follows.  The changes which are most notable are bolded.  
 
+**Note: Until the build is released, this list is preliminary and subject to change.**
+
 - **New Enhancement: Admin modernization** as demonstrated in [this PR](https://github.com/zencart/zencart/pull/7458).
 - **New Feature: <a href="https://github.com/zencart/zencart/discussions/6428">Child Templates</a> will be supported, so that storeowners can more easily determine what has been changed from the base release of a template. (Still TBD)** 
 - Modernization: Zen Cart 3.0 will use Bootstrap 5. 
@@ -22,6 +24,8 @@ The improvements under consideration for inclusion in v3.0.0 are as follows.  Th
 ## 2.2.0 
 
 The improvements in v2.2.0 include the following.  The changes which are most notable are bolded.
+
+**Note: Until the build is released, this list is preliminary and subject to change.**
 
 - **Admin: Order statuses are now color coded.** See [Orders Status](/user/admin_pages/localization/orders_status#color-coding).  This change makes the [Admin > Orders](/user/admin_pages/customers/orders#colors) screen easier to scan. 
 - Admin: Permit the saving of configuration values as HTML character codes.
