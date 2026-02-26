@@ -20,3 +20,8 @@ Now you are ready to create a cron job in your hosting company's control panel t
 php /full/server/path/to/admin/my-script_cron.php
 ```
 
+## Existing Cron Jobs within Zen Cart 
+
+- `admin/products_cron.php` (added in 2.2) will allow you to activate products at a time of your own choosing.  Note that if you use this feature, you will want to set Admin > Configuration > Stock > `ENABLE_DISABLED_UPCOMING_PRODUCT` to `Manual`. 
+- `admin/currency_cron.php` will allow you to update your store's exchange rates.
+
