@@ -7,6 +7,8 @@ weight: 10
 
 **This module is now production ready: https://www.zen-cart.com/downloads.php?do=file&id=2382**
 
+Note: This module is built in to Zen Cart 2.2 and above. 
+
 Migrating to the RESTful module is highly recommended, and is quite straightforward.
 
 PayPal RESTful is a new integration with PayPal which uses the [PayPal REST API](https://developer.paypal.com/api/rest/).
