@@ -11,21 +11,28 @@ noindex: yes
 
 ## 3.0.0 
 
-The improvements in v3.0.0 include the following.  The changes which are most notable are bolded.
+The improvements under consideration for inclusion in v3.0.0 are as follows.  The changes which are most notable are bolded.  
 
-- **New Feature: <a href="https://github.com/zencart/zencart/discussions/6428">Child Templates</a> will be supported, so that storeowners can more easily determine what has been changed from the base release of a template.**
+**Note: Until the build is released, this list is preliminary and subject to change.**
+
+- **New Enhancement: Admin modernization** as demonstrated in [this PR](https://github.com/zencart/zencart/pull/7458).
+- **New Feature: <a href="https://github.com/zencart/zencart/discussions/6428">Child Templates</a> will be supported, so that storeowners can more easily determine what has been changed from the base release of a template. (Still TBD)** 
 - Modernization: Zen Cart 3.0 will use Bootstrap 5. 
 - Modernization: support for older `define` based language files will be dropped.  Moving forward, only [Array based language files](/dev/languages/158_language_files/) will be supported. 
+- Modernization: Encapsulated plugins will have the ability to insert template content.
 
 ## 2.2.0 
 
 The improvements in v2.2.0 include the following.  The changes which are most notable are bolded.
+
+**Note: Until the build is released, this list is preliminary and subject to change.**
 
 - **Admin: Order statuses are now color coded.** See [Orders Status](/user/admin_pages/localization/orders_status#color-coding).  This change makes the [Admin > Orders](/user/admin_pages/customers/orders#colors) screen easier to scan. 
 - Admin: Permit the saving of configuration values as HTML character codes.
 - Admin: Updates to System Inspection plugin.
 - **Admin: Additional images may now be specified in the database rather than using the older [filename matching mechanism](/user/images/image_filename_conventions/).  See [Additional Images Handling](/user/images/additional_images_database/) for details.**
 - Admin: Customers page now has a legend explaining the icons used in the Authorized column.
+- Admin: A sample cron job is provided for storeowners who wish to enable upcoming products at a specific time.  See [Cron Jobs within Zen Cart](/dev/code/admin_cron/#existing-cron-jobs-within-zen-cart).
 - **Admin: [Customer account activation](/user/orders/customer_approval/#customer-account-activation) for customer accounts added.  Stores may now require that new accounts authenticate their email addresses for fraud control.**
 - Admin: The page Admins > Admin Page Registration has been removed.
 - **Admin: Configuration screen now allows all values in a group to be updated at once.  See [Configuration in Zen Cart 2.2.x](/user/admin_pages/configuration/v2.2.0/).**
@@ -38,8 +45,10 @@ The improvements in v2.2.0 include the following.  The changes which are most no
 - Admin: TinyMCE added as the default admin  [HTML Editor](/user/running/html_editors). (CKEditor is locked at an older version; no updates planned.)
 - Admin: Added capability to customize the upper right link bar using a notifier. 
 - Admin: Fixed - Deprecated "Passing null to parameter #1" log created when viewing Admin Packingslip or Admin Invoice.
+- Core: We are simplifying the distribution by removing Laravel.
 - Core: Improved handling of `product` table records which do not have associated `products_description` records.
 - The `DB_CHARSET` setting in the `dist-configure.php` files (Storefront and Admin) has been updated to `utf8mb4`, which is the character set your database should be using at this point.  If it isn't, see [Converting to UTF8MB4](/user/upgrading/convert_to_utf8/) for instructions.
+- **Core: PayPal RESTful pulled in to core.  This updated integration is intended to replace the older PayPal integrations, which will be deprecated at some point in the future by PayPal.  All Zen Cart users are encouraged to upgrade.  For more information, see [PayPal RESTful](/user/payment/paypal_restful/).**
 - Core: Improved PHP 8.4 compatibility. Note that plugins may require updating to run without warnings under PHP 8.4. 
 - Core: Typo in notifier name `NOTIFY_ADMIN_INVOICE_HEADERS_AFTER_TAX` corrected.
 - Core: Updates to POSM to support [Edit Orders 5.0](https://www.zen-cart.com/downloads.php?do=file&id=2400).
