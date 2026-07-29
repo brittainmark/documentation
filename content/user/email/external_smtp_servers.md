@@ -63,7 +63,7 @@ Zen Cart allows the use of Gmail by using the following settings in [Admin > Con
 *   SMTP Host: `smtp.gmail.com`
 *   SMTP Port `587`
 
-[^1]: If this value does not appear in your list of Email Transport options, see [this forum post](https://www.zen-cart.com/showthread.php?223581-Done-v1-5-6-EMAIL_TRANSPORT-settings-created-by-install-upgrade-missing-Gmail&p=1372383#post1372383). 
+[^1]: If this value does not appear in your list of Email Transport options, see [this forum post](https://www.zen-cart.com/showthread.php?223581-Done-v1-5-6-EMAIL_TRANSPORT-settings-created-by-install-upgrade-missing-Gmail&p=1372383#post1372383), but note that you need to upgrade your Zen Cart installation.
 
 **Note:** To use email (eg `SMTPAUTH`) with a Google mail account you need to enable [`allow less secure authentication`](https://myaccount.google.com/lesssecureapps) inside your google account settings. (This name sounds much worse than it is; it's still secure.) 
 
@@ -79,12 +79,19 @@ You may also have to open your webserver's firewall to allow access to Google's 
 
 As of early 2025, additional steps are required to make Gmail work:
 
-- Be sure Zen Cart's Email Transport field is set to `SMTPAUTH` (not `Gmail`)
 - Go to your Gmail Account Security settings. Turn on Two Factor Authentication
 - Go to Apps and add a custom app.  If you don't see a link for creating a custom app, try going to [https://myaccount.google.com/apppasswords](https://myaccount.google.com/apppasswords)
 - Give your app a meaningful name like "zencartmail"
 - Create an application password
-- Set Zen Cart's SMTP Email Account Password field to this new password.  Do not change the SMTP Email Account Mailbox value; it should still be the email address being used.
+
+In Zen Cart Admin > Configuration > Email: 
+- Email Transport:  `SMTPAUTH` (not `Gmail`)
+- SMTP Email Account Password: the application password you just created
+- SMTP Email Account Mailbox value: Your Gmail address
+
+Other fields as above: 
+*   SMTP Host: `smtp.gmail.com`
+*   SMTP Port `587`
 
 Thanks to the author of [this forum post](https://www.zen-cart.com/showthread.php?230666-Gmail-using-Oauth-March-14-2025-notice) for reporting this new procedure. 
 
